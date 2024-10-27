@@ -1,0 +1,29 @@
+﻿<Window x:Class="SQLConnectionStringWriter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLConnectionStringWriter"
+        mc:Ignorable="d"
+        Title="ConfigGUI" Height="290" Width="400"
+        ResizeMode="NoResize"
+        >
+    <Grid Margin="0,0,0,-6">
+        <Label Content="DataSource" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="UserID" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.425,2.937"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.552,1.673"/>
+        <Label Content="InitialCatalog" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="TrustServerCertificate" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Connection String" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DataSource" HorizontalAlignment="Left" Margin="200,14,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="UserID" HorizontalAlignment="Left" Margin="200,39,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Margin="200,65,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="InitialCatalog" HorizontalAlignment="Left" Margin="200,91,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
+        <CheckBox x:Name="TrustServerCertificate" Content="True" HorizontalAlignment="Left" Margin="202,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" Margin="71,215,0,0" VerticalAlignment="Top" Click="Generate_Click" RenderTransformOrigin="1.229,0.504" Width="61" Height="20"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="262,215,0,0" VerticalAlignment="Top" Click="Close_Click" Width="40" Height="20"/>
+        <TextBox x:Name="ConnectionString" HorizontalAlignment="Left" Margin="200,143,0,0" VerticalAlignment="Top" Width="146" IsEnabled="True" Visibility="Visible" />
+        <Image x:Name="ClipboardIcon" HorizontalAlignment="Left" Margin="351,145,0,0" VerticalAlignment="Top" Source="/Resources/clipboard-list.png" Height="14" Width="14" RenderTransformOrigin="0.536,0.681" MouseLeftButtonDown="Clipboard_Click"/>
+
+    </Grid>
+</Window>
