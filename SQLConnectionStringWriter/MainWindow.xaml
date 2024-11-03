@@ -5,25 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLConnectionStringWriter"
         mc:Ignorable="d"
-        Title="ConfigGUI" Height="290" Width="400"
+        Title="ConfigGUI" Height="400" Width="400"
         ResizeMode="NoResize"
         >
-    <Grid Margin="0,0,0,-6">
+    <Grid VerticalAlignment="Top" Margin="0,0,0,-6">
         <Label Content="DataSource" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label Content="UserID" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.425,2.937"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.552,1.673"/>
         <Label Content="InitialCatalog" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
         <Label Content="TrustServerCertificate" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top"/>
-        <Label Content="Connection String" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top"/>
+        <Label Content="Connection String" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top"/>
+        <Label Content="Encryption Type" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top"/>
+        <Label Content="Key" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top"/>
+        <Label Content="IV" HorizontalAlignment="Left" Margin="10,229,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.315,0.522"/>
         <TextBox x:Name="DataSource" HorizontalAlignment="Left" Margin="200,14,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="UserID" HorizontalAlignment="Left" Margin="200,39,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="Password" HorizontalAlignment="Left" Margin="200,65,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="InitialCatalog" HorizontalAlignment="Left" Margin="200,91,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="165"/>
-        <CheckBox x:Name="TrustServerCertificate" Content="True" HorizontalAlignment="Left" Margin="202,118,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" Margin="71,215,0,0" VerticalAlignment="Top" Click="Generate_Click" RenderTransformOrigin="1.229,0.504" Width="61" Height="20"/>
-        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="262,215,0,0" VerticalAlignment="Top" Click="Close_Click" Width="40" Height="20"/>
-        <TextBox x:Name="ConnectionString" HorizontalAlignment="Left" Margin="200,143,0,0" VerticalAlignment="Top" Width="146" IsEnabled="True" Visibility="Visible" />
-        <Image x:Name="ClipboardIcon" HorizontalAlignment="Left" Margin="351,145,0,0" VerticalAlignment="Top" Source="/Resources/clipboard-list.png" Height="14" Width="14" RenderTransformOrigin="0.536,0.681" MouseLeftButtonDown="Clipboard_Click"/>
-
+        <CheckBox x:Name="TrustServerCertificate" Content="True" HorizontalAlignment="Left" Margin="200,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" Margin="71,344,0,0" VerticalAlignment="Top" Click="Generate_Click" RenderTransformOrigin="1.229,0.504" Width="61" Height="20"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="262,344,0,0" VerticalAlignment="Top" Click="Close_Click" Width="40" Height="20"/>
+        <TextBox x:Name="ConnectionString" HorizontalAlignment="Left" Margin="199,259,0,0" VerticalAlignment="Top" Width="146" IsEnabled="True" Visibility="Visible" />
+        <Image x:Name="ClipboardIcon" HorizontalAlignment="Left" Margin="350,261,0,0" VerticalAlignment="Top" Source="/Resources/clipboard-list.png" Height="13" Width="14" RenderTransformOrigin="0.536,0.681" MouseLeftButtonDown="Clipboard_Click"/>
+        <RadioButton x:Name="Encryption_None" Content="None" HorizontalAlignment="Left" Margin="200,148,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="Encryption_XOR" Content="XOR" HorizontalAlignment="Left" Margin="200,168,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="Encry_AES" Content="AES" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <TextBox x:Name="AESKeyInput" HorizontalAlignment="Left" Margin="200,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
+        <TextBox HorizontalAlignment="Left" Margin="199,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
     </Grid>
 </Window>
